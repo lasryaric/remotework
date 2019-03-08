@@ -1,8 +1,7 @@
 # FUSE cached-mirror file system
 
-This is a FUSE (user space) filesystem that caches read() operations for any other file system. This is to help working remotely with large scale remote file systems.
-Example: you run locally an application that loads  files from a remote file system (like glusterFS or NFS). When working on a local network, everything is fast 
-but when working remotely, loading all the remote files again and again can be very costly, this file system mirror the remote file system and caches the file on the local disk so that it can survive reboots.
+This is a FUSE (user space) filesystem that caches read() operations from any other file system. This is to help working remotely with large scale remote file systems.
+Example: you run (localy) an application that loads files from a remote file system (like GlusterFS or NFS). When working on a local network, everything is fast but when working remotely, loading all the remote files again and again can be very costly, this file system mirror the remote file system and caches the file on the local disk so that it can survive reboots.
 
 ### Here are more details:
 ```
